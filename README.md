@@ -1,4 +1,4 @@
-# Financial Python Library
+# Python Finance Library
 
 Lots of different functions in this library. This used to be a gist, but I'll start documenting
 it as a repo on github since I need version control now.
