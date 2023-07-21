@@ -1,0 +1,14 @@
+yfinance~=0.2.22
+# pandas
+# numpy
+# requests
+# beautifulsoup4
+# lxml
+# pytz
+python-Levenshtein
+fuzzywuzzy~=0.18.0
+yahoo_fin
+requests_html
+feedparser~=6.0.2
+simple-term-menu
+tabulate
