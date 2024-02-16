@@ -38,7 +38,7 @@ from enum import IntEnum
 import numpy as np
 from math import floor, ceil
 from pytz import timezone
-import pandas
+import pandas as pd
 from functools import lru_cache, wraps, cmp_to_key
 import time
 import re
@@ -769,7 +769,7 @@ def get_ticker_info_old(ticker: str, round_values=True, use_nasdaq=False) -> dic
         raise NotImplementedError('use_nasdaq cannot be set to True yet')
 
     data_latest = yf_ticker.history(period='5d', interval='1m', prepost=True)
-    timestamp: pandas.Timestamp = data_latest.last_valid_index()  # type: ignore
+    timestamp: pd.Timestamp = data_latest.last_valid_index()  # type: ignore
     latest_price = float(data_latest.tail(1)['Close'].iloc[0])
     # if market is open: most recent close
     # else: close before most recent close
@@ -1591,6 +1591,13 @@ def six_month_movers(stock_group='S&P500', limit=20, total: float=0):
                 stock['position'] = floor(long_size / stock['end_price'])
     return stocks
 
+
+
+def calculate_beta(stock_ticker):
+    # 10 year beta
+    # NOTE: you need to incorporate dividends into the calculation
+    #   In other words, too tough
+    pass
 
 if __name__ == '__main__':
     run_tests()
