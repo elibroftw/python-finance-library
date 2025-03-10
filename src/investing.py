@@ -1,10 +1,9 @@
-"""
+    """
 Investing Analytics
 Author: Elijah Lopez
 Version: 2.2
 Created: April 3rd 2020
 Updated: July 21st 2023
-https://gist.github.com/elibroftw/2c374e9f58229d7cea1c14c6c4194d27
 
 Resources:
 Black-Scholes variables:
